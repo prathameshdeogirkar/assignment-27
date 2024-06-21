@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>performing events in javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="load()">
+    <div class="container">
+    <div class="card">
+        <textarea class="textbox" type="text" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()"
+            onchange="change()"> </textarea>
+        <div>
+            <button class="btn" onclick="console.log('Button 1')">Single Click</button>
+            <button class="btn" ondblclick="console.log('Button 2')">Double Click</button>
+        </div>
+    </div>
+
+    <div class="circle" onmouseover="onmouseOver()" onmouseout="onmouseOut()" onmousemove="onmouseMove()">
+        <span class="circle-text">Mouse Events</span>
+    </div>
+    </div>
+
+    <script>
+        function keyPress() {
+            console.log(`You pressed the key`)
+        }
+
+        function keyDown() {
+            console.log(`key Down`)
+        }
+
+        function keyUp() {
+            console.log(`key is up now`)
+        }
+
+        function change() {
+            console.log(`change`)
+        }
+
+        function onmouseOver() {
+            console.log(`on the circle`);
+        }
+
+        function onmouseOut() {
+            console.log(`out from the circle`);
+        }
+
+        function onmouseMove() {
+            const number = Math.random();
+            console.log(`moving on circle ${number}`);
+        }
+
+        function load(){
+            alert("Page Loading Completed.....")
+        }
+    </script>
+
+</body>
+
+</html>
